@@ -1,5 +1,5 @@
 {
- "generated": "Mon Nov 9, 2026 \u00b7 8:21 PM PT",
+ "generated": "Mon Nov 9, 2026 · 9:25 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -30,11 +30,11 @@
     ],
     [
      "Temp (pass)",
-     "40\u00b0F"
+     "40°F"
     ]
    ],
-   "note": "Closed for the season so far. Summit lists rain at the pass; I-90 is bare and wet with no restrictions.",
-   "updated": "Resort feed, Nov 9 7:39 AM PT; weather 7:38 PM PT",
+   "note": "I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 9 7:39 AM PT; weather Nov 9 9:23 PM PT; lifts last updated Oct 29 10:25 AM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -55,7 +55,8 @@
      "",
      false
     ]
-   ]
+   ],
+   "_forecast": "Forecast: Tue showers 44°F/40°F; Wed partly sunny 53°F/40°F; Thu mostly cloudy 52°F/39°F; Fri showers likely 45°F/35°F; Sat rain and snow showers 42°F/34°F; Sun rain and snow showers 41°F/31°F."
   },
   {
    "id": "summit",
@@ -86,11 +87,11 @@
     ],
     [
      "Temp (pass)",
-     "40\u00b0F"
+     "40°F"
     ]
    ],
-   "note": "Forecast: showers Tue (44\u00b0F), partly sunny Wed (53\u00b0F), mostly cloudy Thu (52\u00b0F), showers Fri (45\u00b0F), rain and snow Sat (42/34\u00b0F) and Sun (41/31\u00b0F). Roads: I-90 bare and wet, no restrictions.",
-   "updated": "Resort feed, Nov 9 7:39 AM PT; weather 7:38 PM PT; lifts last updated Oct 29",
+   "note": "Forecast: Tue showers 44°F/40°F; Wed partly sunny 53°F/40°F; Thu mostly cloudy 52°F/39°F; Fri showers likely 45°F/35°F; Sat rain and snow showers 42°F/34°F; Sun rain and snow showers 41°F/31°F. I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 9 7:39 AM PT; weather Nov 9 9:23 PM PT; lifts last updated Oct 29 10:25 AM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -139,7 +140,7 @@
     ],
     [
      "Temp",
-     "35\u00b0F / 32\u00b0F"
+     "35°F / 32°F"
     ],
     [
      "Weather",
@@ -150,8 +151,8 @@
      "Not scheduled"
     ]
    ],
-   "note": "Baker needs roughly 20 to 40 in of base plus a good forecast before opening. Their last report is from Nov 5, so it is stale.",
-   "updated": "Resort page, Nov 5 4:32 PM PT (stale)",
+   "note": "Baker's own report is stale, so these numbers are from its last update. Baker needs roughly 20 to 40 in of base plus a good forecast before opening. Check the official link for today.",
+   "updated": "Mt. Baker page, November 5, 2026 4:32 PM (4 days old, stale)",
    "link": [
     "Official snow report",
     "https://www.mtbaker.us/snow-report/"
@@ -167,19 +168,19 @@
    "stats": [
     [
      "Temp (base)",
-     "36\u00b0F rain"
+     "36°F rain"
     ],
     [
      "Forecast Wed",
-     "52 / 41\u00b0F"
+     "52 / 41°F"
     ],
     [
      "Forecast Thu",
-     "51 / 41\u00b0F"
+     "51 / 41°F"
     ],
     [
      "Forecast Fri",
-     "44 / 37\u00b0F"
+     "44 / 37°F"
     ],
     [
      "Snow totals",
