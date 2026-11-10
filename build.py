@@ -42,8 +42,10 @@ def badge(rid,size=52):
     return (f'<svg class="logo" width="{size}" height="{size}" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g{rid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c1}"/><stop offset="1" stop-color="{c2}"/></linearGradient></defs>'
             f'<rect width="64" height="64" rx="16" fill="url(#g{rid})"/><path d="M6 50 L22 26 L30 36 L40 18 L58 50 Z" fill="#fff" opacity=".28"/><path d="M36 24 L40 18 L44 24 L41 23 L40 25 L39 23 Z" fill="#fff"/>'
             f'<text x="32" y="56" text-anchor="middle" font-family="Segoe UI,system-ui,sans-serif" font-weight="900" font-size="15" fill="#fff" letter-spacing="1">{t}</text></svg>')
+GOAT='<div class="ribbon">&#11088; Objectively the best mountain&trade; &#11088;</div><div class="sparkles" aria-hidden="true"><i>&#10024;</i><i>&#10024;</i><i>&#10024;</i><i>&#10024;</i></div>'
 e=html.escape
 SHARED=len(sys.argv)>2 and sys.argv[2]=='shared'
+d['resorts'].sort(key=lambda r:r['id']!='summit')
 out=[]
 for r in d['resorts']:
     stats=''.join(f'<div class="stat"><span>{e(k)}</span><b>{e(v)}</b></div>' for k,v in r['stats'])
@@ -65,9 +67,9 @@ for r in d['resorts']:
         cams+=f'<p class="small">Cam blank? <a href="{camlink(r["id"])}" target="_blank" rel="noopener">Open the resort cam page</a>.</p>'
     else:
         cams='<h3>Live cams</h3><p class="nocamtxt">Mt. Baker does not publish a webcam page on its website, so there is no cam to show here.</p>'
-    out.append(f'''<section id="{r['id']}" class="card" style="--rc:{BADGE.get(r['id'],('','#5cc8ff'))[1]}"><header><div class="rh">{badge(r['id'])}<div><h2>{e(r['name'])}</h2><p>{e(r['sub'])}</p></div></div><span class="badge {r['tone']}">{e(r['status'])}</span></header>
+    out.append(f'''<section id="{r['id']}" class="card{' goat' if r['id']=='summit' else ''}" style="--rc:{BADGE.get(r['id'],('','#5cc8ff'))[1]}">{GOAT if r['id']=='summit' else ''}<header><div class="rh">{('<span class="crown">&#128081;</span>' if r['id']=='summit' else '')}{badge(r['id'])}<div><h2>{e(r['name'])}{(' <span class="best">#1</span>') if r['id']=='summit' else ''}</h2><p>{e(r['sub'])}</p>{('<p class="brag">The undisputed king of the Cascades. Source: Brooks.</p>' if r['id']=='summit' else '<p class="notsummit">Not Summit.</p>')}</div></div><span class="badge {r['tone']}">{e(r['status'])}</span></header>
 <div class="stats">{stats}</div><p class="note">{e(r['note'])}</p><p class="small">Source: {e(r['updated'])} · <a href="{r['link'][1]}" target="_blank" rel="noopener">{e(r['link'][0])}</a></p>{cams}</section>''')
-nav=''.join(f'<a href="#{r["id"]}">{badge(r["id"],22)}{e(r["name"])}</a>' for r in d['resorts'])+'<a href="#hesh">&#129305; Hesh</a>'
+nav=''.join(f'<a href="#{r["id"]}">{badge(r["id"],22)}{e(r["name"])}{" &#128081;" if r["id"]=="summit" else ""}</a>' for r in d['resorts'])+'<a href="#hesh">&#129305; Hesh</a>'
 page=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="dark light"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pow Report</title>
 <style>
 :root{{--bg:#0e1a24;--card:#16283a;--ink:#eaf2f8;--mut:#9fb4c6;--acc:#5cc8ff;--line:#244058;--bad:#ff8f6b;--good:#5fe3a1}}
@@ -106,6 +108,17 @@ nav{{border-radius:999px;padding:8px;border:1px solid var(--line);background:col
 h2{{font-weight:800;letter-spacing:-.01em}}.stat b{{font-size:1.35rem;font-weight:800}}.stat{{border-left:3px solid var(--rc,var(--acc))}}
 .tag{{background:var(--rc,var(--acc))}}.cam.feat{{border-color:var(--rc,var(--acc))}}
 @media(max-width:640px){{nav{{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;border-radius:16px;scrollbar-width:none}}nav a{{flex:none}}}}
+.goat{{position:relative;border:3px solid #f5c542;border-top:6px solid #f5c542;box-shadow:0 0 0 4px rgba(245,197,66,.25),0 18px 50px rgba(245,197,66,.35);background:linear-gradient(180deg,rgba(245,197,66,.14),transparent 140px),var(--card);padding-top:44px}}
+.ribbon{{position:absolute;top:0;left:50%;transform:translate(-50%,-55%);background:linear-gradient(90deg,#f5c542,#ffe9a3,#f5c542);color:#4a3200;font-weight:900;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:7px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 6px 18px rgba(245,197,66,.5);animation:pulse 2.4s ease-in-out infinite}}
+@keyframes pulse{{50%{{transform:translate(-50%,-55%) scale(1.06)}}}}
+.goat .rh{{position:relative}}.crown{{position:absolute;left:12px;top:-26px;font-size:1.6rem;transform:rotate(-14deg);filter:drop-shadow(0 3px 4px rgba(0,0,0,.3))}}
+.best{{display:inline-block;vertical-align:middle;background:#f5c542;color:#4a3200;font-size:.75rem;font-weight:900;padding:3px 9px;border-radius:8px;margin-left:6px;transform:rotate(-4deg)}}
+.brag{{margin:2px 0 0!important;color:#c99a1a!important;font-weight:700;font-style:italic;font-size:.9rem}}.notsummit{{margin:2px 0 0!important;font-size:.78rem;opacity:.6;font-style:italic}}
+.goat .stat{{border-left-color:#f5c542}}
+.sparkles i{{position:absolute;font-style:normal;animation:twinkle 2s ease-in-out infinite;pointer-events:none}}.sparkles i:nth-child(1){{top:14px;right:18px}}.sparkles i:nth-child(2){{top:60px;right:70px;animation-delay:.5s}}.sparkles i:nth-child(3){{top:22px;left:44%;animation-delay:1s}}.sparkles i:nth-child(4){{bottom:18px;right:24px;animation-delay:1.5s}}
+@keyframes twinkle{{0%,100%{{opacity:0;transform:scale(.6)}}50%{{opacity:1;transform:scale(1.15)}}}}
+@media(max-width:640px){{.ribbon{{font-size:.66rem;padding:6px 12px}}}}
+@media(prefers-reduced-motion:reduce){{.ribbon,.sparkles i{{animation:none}}}}
 footer{{text-align:center;color:var(--mut);font-size:.85rem;padding:12px 0 8px}}
 @media(prefers-reduced-motion:reduce){{.flakes{{animation:none}}}}
 </style></head><body><div class="hero"><div class="flakes" aria-hidden="true"></div><svg class="ridge" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true"><path d="M0 160 L0 110 L120 70 L210 100 L330 30 L430 90 L520 60 L640 105 L760 20 L880 85 L980 55 L1090 95 L1200 60 L1200 160 Z" fill="var(--bg)" opacity=".55"/><path d="M0 160 L0 130 L160 95 L300 125 L450 80 L600 120 L780 70 L930 115 L1060 90 L1200 110 L1200 160 Z" fill="var(--bg)"/></svg>
