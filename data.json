@@ -1,5 +1,5 @@
 {
- "generated": "Mon Nov 9, 2026 · 9:25 PM PT",
+ "generated": "Mon Nov 9, 2026 · 9:38 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -157,7 +157,8 @@
     "Official snow report",
     "https://www.mtbaker.us/snow-report/"
    ],
-   "cams": []
+   "cams": [],
+   "warn": "Heads up: Baker's own report is 4 days old. These numbers may be out of date; check the official link."
   },
   {
    "id": "stevens",
@@ -223,7 +224,12 @@
      "stevenspasssnowstake",
      false
     ]
-   ]
+   ],
+   "latest": {
+    "title": "Winter Update: Nov. 5, 2026",
+    "url": "https://blog.stevenspass.com/winter-update-nov-5-2026/",
+    "date": "Nov 5"
+   }
   }
  ]
 }
