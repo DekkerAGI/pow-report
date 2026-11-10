@@ -35,6 +35,13 @@ HESH_LOCAL = """<section id="hesh" class="card hesh"><header><div><h2>Hesh Corne
 <p class="small"><button id="gifnext" type="button" class="gifbtn">Another one &#8635;</button> <a id="giflink" target="_blank" rel="noopener">Open on GIPHY</a> &middot; via GIPHY</p></section>
 <style>.gifbox{max-width:520px;margin:12px auto;aspect-ratio:16/10;background:#000;border-radius:12px;overflow:hidden}.gifbox iframe{width:100%;height:100%;aspect-ratio:auto}.gifbtn{font:inherit;font-weight:700;color:#04202f;background:var(--acc);border:0;border-radius:999px;padding:10px 16px;min-height:44px;cursor:pointer;margin-right:8px}</style>
 <script>(function(){var G=__GIFS__,last=-1;function go(){var i;do{i=Math.floor(Math.random()*G.length)}while(i==last&&G.length>1);last=i;var g=G[i];document.getElementById("gifframe").src="https://giphy.com/embed/"+g[0];document.getElementById("gifname").textContent=g[1].toUpperCase();document.getElementById("giflink").href="https://giphy.com/gifs/"+g[0];}go();document.getElementById("gifnext").addEventListener("click",go);})();</script>""".replace("__GIFS__", _j.dumps(GIFS))
+
+BADGE={'alpental':('AL','#ff6b4a','#c2361b'),'summit':('SS','#3d9bff','#1857c4'),'baker':('MB','#9b7bff','#5a35d6'),'stevens':('SP','#2fd39a','#0f8a5f')}
+def badge(rid,size=52):
+    t,c1,c2=BADGE.get(rid,('??','#5cc8ff','#0a6fb0'))
+    return (f'<svg class="logo" width="{size}" height="{size}" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g{rid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c1}"/><stop offset="1" stop-color="{c2}"/></linearGradient></defs>'
+            f'<rect width="64" height="64" rx="16" fill="url(#g{rid})"/><path d="M6 50 L22 26 L30 36 L40 18 L58 50 Z" fill="#fff" opacity=".28"/><path d="M36 24 L40 18 L44 24 L41 23 L40 25 L39 23 Z" fill="#fff"/>'
+            f'<text x="32" y="56" text-anchor="middle" font-family="Segoe UI,system-ui,sans-serif" font-weight="900" font-size="15" fill="#fff" letter-spacing="1">{t}</text></svg>')
 e=html.escape
 SHARED=len(sys.argv)>2 and sys.argv[2]=='shared'
 out=[]
@@ -58,9 +65,9 @@ for r in d['resorts']:
         cams+=f'<p class="small">Cam blank? <a href="{camlink(r["id"])}" target="_blank" rel="noopener">Open the resort cam page</a>.</p>'
     else:
         cams='<h3>Live cams</h3><p class="nocamtxt">Mt. Baker does not publish a webcam page on its website, so there is no cam to show here.</p>'
-    out.append(f'''<section id="{r['id']}" class="card"><header><div><h2>{e(r['name'])}</h2><p>{e(r['sub'])}</p></div><span class="badge {r['tone']}">{e(r['status'])}</span></header>
+    out.append(f'''<section id="{r['id']}" class="card" style="--rc:{BADGE.get(r['id'],('','#5cc8ff'))[1]}"><header><div class="rh">{badge(r['id'])}<div><h2>{e(r['name'])}</h2><p>{e(r['sub'])}</p></div></div><span class="badge {r['tone']}">{e(r['status'])}</span></header>
 <div class="stats">{stats}</div><p class="note">{e(r['note'])}</p><p class="small">Source: {e(r['updated'])} · <a href="{r['link'][1]}" target="_blank" rel="noopener">{e(r['link'][0])}</a></p>{cams}</section>''')
-nav=''.join(f'<a href="#{r["id"]}">{e(r["name"])}</a>' for r in d['resorts'])
+nav=''.join(f'<a href="#{r["id"]}">{badge(r["id"],22)}{e(r["name"])}</a>' for r in d['resorts'])+'<a href="#hesh">&#129305; Hesh</a>'
 page=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="dark light"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pow Report</title>
 <style>
 :root{{--bg:#0e1a24;--card:#16283a;--ink:#eaf2f8;--mut:#9fb4c6;--acc:#5cc8ff;--line:#244058;--bad:#ff8f6b;--good:#5fe3a1}}
@@ -85,7 +92,23 @@ a.camlink{{display:flex;align-items:center;gap:10px;background:var(--bg);border:
 .small a{{display:inline-block;padding:8px 2px}}nav a{{min-height:36px;display:inline-flex;align-items:center}}
 @media(prefers-reduced-motion:reduce){{#flyer,#rider{{animation:none!important}}}}
 iframe{{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}}.nocam,.nocamtxt{{padding:24px;color:var(--mut)}}
-</style></head><body><div class="wrap"><div class="top"><h1>Pow Report</h1><p>Updated {e(d['generated'])} · four mountains · courtesy of Brooks · live cams play right here</p></div>
-<nav>{nav}</nav>{''.join(out)}{HESH_LOCAL}</div><script>if(location.hostname==='localhost'){{setInterval(function(){{fetch('/ping',{{cache:'no-store'}}).catch(function(){{}})}},30000)}}</script></body></html>'''
+
+.hero{{position:relative;overflow:hidden;background:linear-gradient(160deg,#0b3a5c 0%,#1a6fa3 45%,#7fc8f0 100%);color:#fff;padding:44px 16px 96px;text-align:center}}
+.herotxt{{position:relative;z-index:2;max-width:760px;margin:0 auto}}.kicker{{margin:0 0 6px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;opacity:.9}}
+.hero h1{{font-size:clamp(2.4rem,7vw,4rem);font-weight:900;letter-spacing:-.02em;margin:0;text-shadow:0 4px 24px rgba(0,0,0,.25)}}.hero .sub{{margin:8px 0 16px;font-size:1.05rem;opacity:.95;color:#fff}}
+.chip{{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px);padding:6px 14px;border-radius:999px;font-weight:600;font-size:.88rem}}
+.ridge{{position:absolute;left:0;bottom:-1px;width:100%;height:110px;z-index:1}}
+.flakes{{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(2px 2px at 120px 80px,#fff,transparent),radial-gradient(1.5px 1.5px at 200px 20px,#fff,transparent),radial-gradient(2.5px 2.5px at 300px 120px,#fff,transparent),radial-gradient(1.5px 1.5px at 360px 60px,#fff,transparent);background-size:400px 160px;opacity:.7;animation:snow 12s linear infinite}}
+@keyframes snow{{from{{background-position:0 0}}to{{background-position:60px 160px}}}}
+.wrap{{margin-top:-28px;position:relative;z-index:3}}
+nav{{border-radius:999px;padding:8px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);justify-content:center;top:8px}}nav a{{gap:8px}}nav .logo{{border-radius:6px;flex:none}}
+.card{{border-top:4px solid var(--rc,var(--acc));box-shadow:0 10px 30px rgba(0,0,0,.18);transition:transform .2s}}.rh{{display:flex;gap:14px;align-items:center}}.rh .logo{{flex:none;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}}
+h2{{font-weight:800;letter-spacing:-.01em}}.stat b{{font-size:1.35rem;font-weight:800}}.stat{{border-left:3px solid var(--rc,var(--acc))}}
+.tag{{background:var(--rc,var(--acc))}}.cam.feat{{border-color:var(--rc,var(--acc))}}
+@media(max-width:640px){{nav{{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;border-radius:16px;scrollbar-width:none}}nav a{{flex:none}}}}
+footer{{text-align:center;color:var(--mut);font-size:.85rem;padding:12px 0 8px}}
+@media(prefers-reduced-motion:reduce){{.flakes{{animation:none}}}}
+</style></head><body><div class="hero"><div class="flakes" aria-hidden="true"></div><svg class="ridge" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true"><path d="M0 160 L0 110 L120 70 L210 100 L330 30 L430 90 L520 60 L640 105 L760 20 L880 85 L980 55 L1090 95 L1200 60 L1200 160 Z" fill="var(--bg)" opacity=".55"/><path d="M0 160 L0 130 L160 95 L300 125 L450 80 L600 120 L780 70 L930 115 L1060 90 L1200 110 L1200 160 Z" fill="var(--bg)"/></svg>
+<div class="herotxt"><p class="kicker">&#10052; Washington Cascades</p><h1>Pow Report</h1><p class="sub">Snow, lifts and live cams for four mountains, in one place.</p><span class="chip">Updated {e(d['generated'])}</span></div></div><div class="wrap"><nav>{nav}</nav>{''.join(out)}{HESH_LOCAL}<footer>Made by Brooks &middot; data from each resort's official report and NOAA &middot; refreshes twice a day</footer></div><script>if(location.hostname==='localhost'){{setInterval(function(){{fetch('/ping',{{cache:'no-store'}}).catch(function(){{}})}},30000)}}</script></body></html>'''
 open(sys.argv[1] if len(sys.argv)>1 else 'pow.html','w',encoding='utf-8').write(page)
 print(len(page))
