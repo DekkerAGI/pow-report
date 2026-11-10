@@ -16,25 +16,27 @@ HESH = """<section id="hesh" class="card hesh"><header><div><h2>Hesh Corner</h2>
 <script>(function(){var T=[["Backflip","flip"],["360 Spin","spin"],["Tail Grab","grab"],["Double Flip","flip"]];function go(){var t=T[Math.floor(Math.random()*T.length)];var r=document.getElementById("rider");r.style.animationName="none";void r.getBoundingClientRect();r.style.animationName=t[1];r.style.animationDuration=t[0]=="Double Flip"?"1.6s":"2.2s";document.getElementById("trickname").textContent=t[0].toUpperCase();}go();document.querySelector(".hesh svg").addEventListener("click",go);})();</script>"""
 
 GIFS = [
- ("ufE5IOg1nUr0NbkBoT","Ski backflip","https://giphy.com/gifs/stompittutorials-skiing-backflip-stompit-ufE5IOg1nUr0NbkBoT"),
- ("p4tkbspSWPTTum4Zkc","Terrain park ski jump","https://giphy.com/gifs/sunshinevillageresort-terrain-park-laps-rat-p4tkbspSWPTTum4Zkc"),
- ("3o7TKRSGkMqOXdSU7K","Snowboard air","https://giphy.com/gifs/redbull-red-bull-snowboarding-3o7TKRSGkMqOXdSU7K"),
- ("l3nWslgFc6s1l6IX6","Snowboard send","https://giphy.com/gifs/redbull-snow-winter-snowboard-l3nWslgFc6s1l6IX6"),
+ ("IdyhZspLSz8v7dIRz5","Snow fail"),("bXkNSePOO0JUs","Ski fail"),("yzZaHGT4DrmroFhSCA","Crash"),
+ ("74u3n5M7SJx7O","Skiing FML"),("5tsljgroZCHcbk6IHg","Oof"),("6L85SZN79VxEA","Ski fail"),
+ ("da81SkQHlZnHO","Jump fail"),("7aLx6EHBGyTZTNOt5G","Bad luck"),("3ohjUXJLsWfq0jfiJq","Ski fail"),
+ ("24bc6h4Mo05pG4XqaU","Ski lift fail"),("l0HUp5iTjX4EQ7FjW","Ski fail"),("dhE00eldVD4qVYLGzz","Oh snap"),
+ ("jsa4uq9GXUc8b2o1Pj","Snowboard fail"),("QveYuf4ZZ6a44Cbjq3","Wipe out"),("5WJ09Mca4SzernO9ZV","Ski lol"),
+ ("9V5kiNQeEjYCOYOI0b","Snow lol"),("IgYDgCU3kzXW8M7ngn","Wipe out"),("3o7WIK06ZsP1otF7na","Snow fail"),
+ ("xT1R9O0SrcXEAWgA9y","Snowboard fail"),("xT1R9TrQ5FJxXYFZC0","Snowboard fail"),("67YGUW9ZdnLLI4NevB","Oh snap"),
+ ("3ohjV5LQl37fGh73BC","Snow fail"),("gLnkFkYgZ6OV29oXlE","Superman slide"),("2aLiVCqTZmxwXeRfMh","Flip"),
+ ("9G579B3WJEpRDiB5Q3","Happy dance"),("du01oCd7HAGIfepv6h","Big jump"),("eXV1PI2KNHzc3B8WXa","Yeeew"),
+ ("woaB39XsYsa7eEILsl","Send it"),("fjxyb50ECopVz7ElPL","Nailed it"),("56TW6jmxL6BfP4IMhA","Ski tricks"),
+ ("roZjCXM6CSvp6","Ski trick"),("ufE5IOg1nUr0NbkBoT","Backflip"),("p4tkbspSWPTTum4Zkc","Park jump"),
+ ("3o7TKRSGkMqOXdSU7K","Snowboard air"),("l3nWslgFc6s1l6IX6","Snowboard send"),
 ]
 import json as _j
-HESH_LOCAL = """<section id="hesh" class="card hesh"><header><div><h2>Hesh Corner</h2><p>Certified hesh content. Nothing important here.</p></div><span class="badge open" id="gifname">TODAY</span></header>
-<div class="gifbox"><iframe id="gifframe" title="Hesh gif of the day" allow="autoplay" loading="lazy"></iframe></div>
-<p class="small">Gif of the day, rotates daily. <a id="giflink" target="_blank" rel="noopener">Open on GIPHY</a> &middot; via GIPHY</p></section>
-<style>.gifbox{max-width:520px;margin:12px auto;aspect-ratio:16/10;background:#000;border-radius:12px;overflow:hidden}.gifbox iframe{width:100%;height:100%;aspect-ratio:auto}</style>
-<script>(function(){var G=__GIFS__;var d=new Date();var day=Math.floor((d-new Date(d.getFullYear(),0,0))/864e5);var g=G[day%G.length];document.getElementById("gifframe").src="https://giphy.com/embed/"+g[0];document.getElementById("gifname").textContent=g[1].toUpperCase();document.getElementById("giflink").href=g[2];})();</script>""".replace("__GIFS__", _j.dumps(GIFS))
+HESH_LOCAL = """<section id="hesh" class="card hesh"><header><div><h2>Hesh Corner</h2><p>Certified hesh content. Nothing important here.</p></div><span class="badge open" id="gifname">HESH</span></header>
+<div class="gifbox"><iframe id="gifframe" title="Random hesh gif" allow="autoplay" loading="lazy"></iframe></div>
+<p class="small"><button id="gifnext" type="button" class="gifbtn">Another one &#8635;</button> <a id="giflink" target="_blank" rel="noopener">Open on GIPHY</a> &middot; via GIPHY</p></section>
+<style>.gifbox{max-width:520px;margin:12px auto;aspect-ratio:16/10;background:#000;border-radius:12px;overflow:hidden}.gifbox iframe{width:100%;height:100%;aspect-ratio:auto}.gifbtn{font:inherit;font-weight:700;color:#04202f;background:var(--acc);border:0;border-radius:999px;padding:10px 16px;min-height:44px;cursor:pointer;margin-right:8px}</style>
+<script>(function(){var G=__GIFS__,last=-1;function go(){var i;do{i=Math.floor(Math.random()*G.length)}while(i==last&&G.length>1);last=i;var g=G[i];document.getElementById("gifframe").src="https://giphy.com/embed/"+g[0];document.getElementById("gifname").textContent=g[1].toUpperCase();document.getElementById("giflink").href="https://giphy.com/gifs/"+g[0];}go();document.getElementById("gifnext").addEventListener("click",go);})();</script>""".replace("__GIFS__", _j.dumps(GIFS))
 e=html.escape
 SHARED=len(sys.argv)>2 and sys.argv[2]=='shared'
-def warn(r):
-    return f'<p class="warn">{e(r["warn"])}</p>' if r.get('warn') else ''
-def latest(r):
-    l=r.get('latest')
-    if not l: return ''
-    return f'<p class="latest"><b>Latest from the resort:</b> <a href="{e(l["url"])}" target="_blank" rel="noopener">{e(l["title"])}</a> <span class="small">({e(l["date"])})</span></p>'
 out=[]
 for r in d['resorts']:
     stats=''.join(f'<div class="stat"><span>{e(k)}</span><b>{e(v)}</b></div>' for k,v in r['stats'])
@@ -54,7 +56,7 @@ for r in d['resorts']:
     else:
         cams='<h3>Live cams</h3><p class="nocamtxt">Mt. Baker does not publish a webcam page on its website, so there is no cam to show here.</p>'
     out.append(f'''<section id="{r['id']}" class="card"><header><div><h2>{e(r['name'])}</h2><p>{e(r['sub'])}</p></div><span class="badge {r['tone']}">{e(r['status'])}</span></header>
-<div class="stats">{stats}</div>{warn(r)}<p class="note">{e(r['note'])}</p>{latest(r)}<p class="small">Source: {e(r['updated'])} · <a href="{r['link'][1]}" target="_blank" rel="noopener">{e(r['link'][0])}</a></p>{cams}</section>''')
+<div class="stats">{stats}</div><p class="note">{e(r['note'])}</p><p class="small">Source: {e(r['updated'])} · <a href="{r['link'][1]}" target="_blank" rel="noopener">{e(r['link'][0])}</a></p>{cams}</section>''')
 nav=''.join(f'<a href="#{r["id"]}">{e(r["name"])}</a>' for r in d['resorts'])
 page=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="dark light"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pow Report</title>
 <style>
@@ -71,7 +73,7 @@ h2{{margin:0;font-size:1.5rem}}h3{{margin:18px 0 8px;font-size:1rem;color:var(--
 .badge{{padding:5px 12px;border-radius:999px;font-weight:700;font-size:.8rem;border:1px solid}}.badge.closed{{color:var(--bad);border-color:var(--bad)}}.badge.open{{color:var(--good);border-color:var(--good)}}
 .stats{{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:16px 0}}
 .stat{{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}}.stat span{{display:block;color:var(--mut);font-size:.78rem}}.stat b{{font-size:1.2rem}}
-.warn{{margin:10px 0 0;padding:8px 12px;border:1px solid var(--bad);border-radius:10px;color:var(--bad);font-weight:600}}.latest{{margin:8px 0}}.note{{margin:6px 0}}.small{{color:var(--mut);font-size:.82rem;margin:6px 0}}a{{color:var(--acc)}}
+.note{{margin:6px 0}}.small{{color:var(--mut);font-size:.82rem;margin:6px 0}}a{{color:var(--acc)}}
 .cams{{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:14px}}
 .cam{{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden}}.cam.feat{{border-color:var(--acc)}}
 figcaption{{padding:8px 12px;font-weight:600}}.tag{{background:var(--acc);color:#04202f;font-size:.68rem;font-weight:800;padding:2px 7px;border-radius:6px;margin-right:8px}}
@@ -81,6 +83,6 @@ a.camlink{{display:flex;align-items:center;gap:10px;background:var(--bg);border:
 @media(prefers-reduced-motion:reduce){{#flyer,#rider{{animation:none!important}}}}
 iframe{{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}}.nocam,.nocamtxt{{padding:24px;color:var(--mut)}}
 </style></head><body><div class="wrap"><div class="top"><h1>Pow Report</h1><p>Updated {e(d['generated'])} · four mountains · courtesy of Brooks · {'tap a cam to watch it live' if SHARED else 'live cams play right here'}</p></div>
-<nav>{nav}</nav>{''.join(out)}{HESH if SHARED else HESH_LOCAL}</div><script>if(location.hostname==='localhost'){{setInterval(function(){{fetch('/ping',{{cache:'no-store'}}).catch(function(){{}})}},30000)}}</script></body></html>'''
+<nav>{nav}</nav>{''.join(out)}{HESH_LOCAL}</div><script>if(location.hostname==='localhost'){{setInterval(function(){{fetch('/ping',{{cache:'no-store'}}).catch(function(){{}})}},30000)}}</script></body></html>'''
 open(sys.argv[1] if len(sys.argv)>1 else 'pow.html','w',encoding='utf-8').write(page)
 print(len(page))
