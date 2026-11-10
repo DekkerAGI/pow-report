@@ -29,6 +29,12 @@ HESH_LOCAL = """<section id="hesh" class="card hesh"><header><div><h2>Hesh Corne
 <script>(function(){var G=__GIFS__;var d=new Date();var day=Math.floor((d-new Date(d.getFullYear(),0,0))/864e5);var g=G[day%G.length];document.getElementById("gifframe").src="https://giphy.com/embed/"+g[0];document.getElementById("gifname").textContent=g[1].toUpperCase();document.getElementById("giflink").href=g[2];})();</script>""".replace("__GIFS__", _j.dumps(GIFS))
 e=html.escape
 SHARED=len(sys.argv)>2 and sys.argv[2]=='shared'
+def warn(r):
+    return f'<p class="warn">{e(r["warn"])}</p>' if r.get('warn') else ''
+def latest(r):
+    l=r.get('latest')
+    if not l: return ''
+    return f'<p class="latest"><b>Latest from the resort:</b> <a href="{e(l["url"])}" target="_blank" rel="noopener">{e(l["title"])}</a> <span class="small">({e(l["date"])})</span></p>'
 out=[]
 for r in d['resorts']:
     stats=''.join(f'<div class="stat"><span>{e(k)}</span><b>{e(v)}</b></div>' for k,v in r['stats'])
@@ -48,7 +54,7 @@ for r in d['resorts']:
     else:
         cams='<h3>Live cams</h3><p class="nocamtxt">Mt. Baker does not publish a webcam page on its website, so there is no cam to show here.</p>'
     out.append(f'''<section id="{r['id']}" class="card"><header><div><h2>{e(r['name'])}</h2><p>{e(r['sub'])}</p></div><span class="badge {r['tone']}">{e(r['status'])}</span></header>
-<div class="stats">{stats}</div><p class="note">{e(r['note'])}</p><p class="small">Source: {e(r['updated'])} · <a href="{r['link'][1]}" target="_blank" rel="noopener">{e(r['link'][0])}</a></p>{cams}</section>''')
+<div class="stats">{stats}</div>{warn(r)}<p class="note">{e(r['note'])}</p>{latest(r)}<p class="small">Source: {e(r['updated'])} · <a href="{r['link'][1]}" target="_blank" rel="noopener">{e(r['link'][0])}</a></p>{cams}</section>''')
 nav=''.join(f'<a href="#{r["id"]}">{e(r["name"])}</a>' for r in d['resorts'])
 page=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="dark light"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pow Report</title>
 <style>
@@ -65,7 +71,7 @@ h2{{margin:0;font-size:1.5rem}}h3{{margin:18px 0 8px;font-size:1rem;color:var(--
 .badge{{padding:5px 12px;border-radius:999px;font-weight:700;font-size:.8rem;border:1px solid}}.badge.closed{{color:var(--bad);border-color:var(--bad)}}.badge.open{{color:var(--good);border-color:var(--good)}}
 .stats{{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:16px 0}}
 .stat{{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}}.stat span{{display:block;color:var(--mut);font-size:.78rem}}.stat b{{font-size:1.2rem}}
-.note{{margin:6px 0}}.small{{color:var(--mut);font-size:.82rem;margin:6px 0}}a{{color:var(--acc)}}
+.warn{{margin:10px 0 0;padding:8px 12px;border:1px solid var(--bad);border-radius:10px;color:var(--bad);font-weight:600}}.latest{{margin:8px 0}}.note{{margin:6px 0}}.small{{color:var(--mut);font-size:.82rem;margin:6px 0}}a{{color:var(--acc)}}
 .cams{{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:14px}}
 .cam{{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden}}.cam.feat{{border-color:var(--acc)}}
 figcaption{{padding:8px 12px;font-weight:600}}.tag{{background:var(--acc);color:#04202f;font-size:.68rem;font-weight:800;padding:2px 7px;border-radius:6px;margin-right:8px}}

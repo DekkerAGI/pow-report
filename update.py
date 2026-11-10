@@ -113,10 +113,18 @@ def baker_update(d):
         except Exception:
             age = None
         stale = age is not None and age >= 2
+        r["warn"] = f"Heads up: Baker's own report is {age} days old. These numbers may be out of date; check the official link." if age is not None and age >= 1 else ""
         r["updated"] = f"Mt. Baker page, {stamp}" + (f" ({age} days old, stale)" if stale else "")
         if age is not None and age >= 2:
             r["note"] = "Baker's own report is stale, so these numbers are from its last update. Baker needs roughly 20 to 40 in of base plus a good forecast before opening. Check the official link for today."
     r["_baker_ok"] = bool(m)
+
+def stevens_blog_update(d):
+    posts = get("https://blog.stevenspass.com/wp-json/wp/v2/posts?per_page=1&_fields=date,link,title")
+    p = posts[0]
+    title = re.sub(r"<[^>]+>", "", p["title"]["rendered"]).replace("&#8211;", "-").replace("&amp;", "&").replace("&#8217;", "'")
+    dt = datetime.fromisoformat(p["date"])
+    find_resort(d, "stevens")["latest"] = {"title": title, "url": p["link"], "date": dt.strftime("%b %-d")}
 
 def build_notes(d):
     for rid in ("alpental", "summit"):
@@ -131,7 +139,7 @@ def build_notes(d):
 def main():
     d = json.load(open("data.json"))
     problems = []
-    for fn in (summit_update, weather_update, roads_update, baker_update):
+    for fn in (summit_update, weather_update, roads_update, baker_update, stevens_blog_update):
         try:
             fn(d)
         except Exception as e:
