@@ -1,0 +1,228 @@
+{
+ "generated": "Mon Nov 9, 2026 \u00b7 8:21 PM PT",
+ "resorts": [
+  {
+   "id": "alpental",
+   "name": "Alpental",
+   "sub": "Snoqualmie Pass, WA",
+   "status": "CLOSED",
+   "tone": "closed",
+   "stats": [
+    [
+     "Lifts open",
+     "0 of 6"
+    ],
+    [
+     "Trails open",
+     "0 of 19"
+    ],
+    [
+     "Base depth",
+     "0 in"
+    ],
+    [
+     "Season total",
+     "2 in"
+    ],
+    [
+     "New snow 24h",
+     "0 in"
+    ],
+    [
+     "Temp (pass)",
+     "40\u00b0F"
+    ]
+   ],
+   "note": "Closed for the season so far. Summit lists rain at the pass; I-90 is bare and wet with no restrictions.",
+   "updated": "Resort feed, Nov 9 7:39 AM PT; weather 7:38 PM PT",
+   "link": [
+    "Official mountain report",
+    "https://www.summitatsnoqualmie.com/mountain-report"
+   ],
+   "cams": [
+    [
+     "Alpental Top",
+     "NGuSbRSJyOJLLfafRPZsW8AR5KwumAsKQehw7Gwy",
+     true
+    ],
+    [
+     "Alpental Mid-Mountain",
+     "",
+     false
+    ],
+    [
+     "Alpental Base",
+     "",
+     false
+    ]
+   ]
+  },
+  {
+   "id": "summit",
+   "name": "Summit at Snoqualmie",
+   "sub": "Summit West, Silver Fir, Summit Central",
+   "status": "CLOSED",
+   "tone": "closed",
+   "stats": [
+    [
+     "Lifts open",
+     "0 of 19"
+    ],
+    [
+     "Trails open",
+     "0 of 64"
+    ],
+    [
+     "Base depth",
+     "0 in"
+    ],
+    [
+     "Season total",
+     "3 in"
+    ],
+    [
+     "New snow 24h",
+     "0 in"
+    ],
+    [
+     "Temp (pass)",
+     "40\u00b0F"
+    ]
+   ],
+   "note": "Forecast: showers Tue (44\u00b0F), partly sunny Wed (53\u00b0F), mostly cloudy Thu (52\u00b0F), showers Fri (45\u00b0F), rain and snow Sat (42/34\u00b0F) and Sun (41/31\u00b0F). Roads: I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed, Nov 9 7:39 AM PT; weather 7:38 PM PT; lifts last updated Oct 29",
+   "link": [
+    "Official mountain report",
+    "https://www.summitatsnoqualmie.com/mountain-report"
+   ],
+   "cams": [
+    [
+     "Summit Central Top",
+     "QmtJtO3Wu8E9ENHmhB7piw3WgETrtRAW18bz69ib",
+     true
+    ],
+    [
+     "Summit Central Base",
+     "fd40qLVRwed5kxqpbDiphgPpYnRZRoEP9bCGBE20",
+     false
+    ],
+    [
+     "Summit West Base",
+     "PZyoJBnQWsgYwwHoRAmjihHkxPi4lD8yZSOFkJZk",
+     false
+    ],
+    [
+     "Silver Fir Base",
+     "QOEw0n5iYoDuo29nGI2ROCZhB3nwB2KSF5jEPy99",
+     false
+    ]
+   ]
+  },
+  {
+   "id": "baker",
+   "name": "Mt. Baker",
+   "sub": "Heather Meadows and Pan Dome",
+   "status": "CLOSED, no opening date",
+   "tone": "closed",
+   "stats": [
+    [
+     "Slopes",
+     "Closed"
+    ],
+    [
+     "Base depth",
+     "3 in / 7 in"
+    ],
+    [
+     "New snow",
+     "0 in"
+    ],
+    [
+     "Temp",
+     "35\u00b0F / 32\u00b0F"
+    ],
+    [
+     "Weather",
+     "Raining"
+    ],
+    [
+     "Opening",
+     "Not scheduled"
+    ]
+   ],
+   "note": "Baker needs roughly 20 to 40 in of base plus a good forecast before opening. Their last report is from Nov 5, so it is stale.",
+   "updated": "Resort page, Nov 5 4:32 PM PT (stale)",
+   "link": [
+    "Official snow report",
+    "https://www.mtbaker.us/snow-report/"
+   ],
+   "cams": []
+  },
+  {
+   "id": "stevens",
+   "name": "Stevens Pass",
+   "sub": "Skyline, Jupiter, Hogsback area",
+   "status": "NOT OPEN YET",
+   "tone": "closed",
+   "stats": [
+    [
+     "Temp (base)",
+     "36\u00b0F rain"
+    ],
+    [
+     "Forecast Wed",
+     "52 / 41\u00b0F"
+    ],
+    [
+     "Forecast Thu",
+     "51 / 41\u00b0F"
+    ],
+    [
+     "Forecast Fri",
+     "44 / 37\u00b0F"
+    ],
+    [
+     "Snow totals",
+     "not reported"
+    ],
+    [
+     "Lifts",
+     "not reported"
+    ]
+   ],
+   "note": "Stevens loads its weather and lift data with scripts, so these numbers are from my last full read (Nov 9, 7 PM PT) and may be a bit old. Tap the official link for live lift status.",
+   "updated": "Weather page, Nov 9 7 PM PT",
+   "link": [
+    "Official conditions",
+    "https://www.stevenspass.com/the-mountain/mountain-conditions/weather-report.aspx"
+   ],
+   "cams": [
+    [
+     "Skyline",
+     "stevenspassskyline",
+     true
+    ],
+    [
+     "Jupiter",
+     "stevenspassjupiter",
+     false
+    ],
+    [
+     "Courtyard",
+     "stevenspasscourtyard",
+     false
+    ],
+    [
+     "Ski and Snowboard School",
+     "stevenspassschool",
+     false
+    ],
+    [
+     "Snow Stake",
+     "stevenspasssnowstake",
+     false
+    ]
+   ]
+  }
+ ]
+}
