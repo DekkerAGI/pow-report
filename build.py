@@ -47,6 +47,9 @@ for r in d['resorts']:
         def card(c,f):
             u=camurl(r['id'],c[1]) if c[1] else None
             body=(f'<iframe src="{u}" loading="lazy" allow="autoplay; fullscreen" referrerpolicy="no-referrer-when-downgrade" title="{e(c[0])}"></iframe>' if u else '<div class="nocam">Open this cam on the resort site</div>')
+            if SHARED and f and u:
+                au=u+('&' if '?' in u else '?')+'autoplay=1&mute=1'
+                return f'<figure class="cam feat"><figcaption><span class="tag">LIFT CAM</span>{e(c[0])} &middot; live</figcaption><iframe src="{au}" allow="autoplay; fullscreen; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="{e(c[0])}"></iframe></figure>'
             if SHARED:
                 lk=u or camlink(r['id'])
                 return f'<a class="camlink{" feat" if f else ""}" href="{lk}" target="_blank" rel="noopener"><span class="tag">{"LIFT CAM" if f else "CAM"}</span><b>{e(c[0])}</b><span class="go">Watch live &rarr;</span></a>'
@@ -82,7 +85,7 @@ a.camlink{{display:flex;align-items:center;gap:10px;background:var(--bg);border:
 .small a{{display:inline-block;padding:8px 2px}}nav a{{min-height:36px;display:inline-flex;align-items:center}}
 @media(prefers-reduced-motion:reduce){{#flyer,#rider{{animation:none!important}}}}
 iframe{{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}}.nocam,.nocamtxt{{padding:24px;color:var(--mut)}}
-</style></head><body><div class="wrap"><div class="top"><h1>Pow Report</h1><p>Updated {e(d['generated'])} · four mountains · courtesy of Brooks · {'tap a cam to watch it live' if SHARED else 'live cams play right here'}</p></div>
+</style></head><body><div class="wrap"><div class="top"><h1>Pow Report</h1><p>Updated {e(d['generated'])} · four mountains · courtesy of Brooks · live cams play right here</p></div>
 <nav>{nav}</nav>{''.join(out)}{HESH_LOCAL}</div><script>if(location.hostname==='localhost'){{setInterval(function(){{fetch('/ping',{{cache:'no-store'}}).catch(function(){{}})}},30000)}}</script></body></html>'''
 open(sys.argv[1] if len(sys.argv)>1 else 'pow.html','w',encoding='utf-8').write(page)
 print(len(page))
