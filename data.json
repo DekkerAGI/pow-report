@@ -1,5 +1,5 @@
 {
- "generated": "Fri Nov 13, 2026 · 12:39 PM PT",
+ "generated": "Fri Nov 13, 2026 · 5:41 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -30,11 +30,11 @@
     ],
     [
      "Temp (pass)",
-     "46°F"
+     "43°F"
     ]
    ],
-   "note": "I-90 bare and dry, no restrictions.",
-   "updated": "Resort feed Nov 13 8:37 AM PT; weather Nov 13 12:32 PM PT; lifts last updated Oct 29 10:25 AM PT",
+   "note": "I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 13 8:37 AM PT; weather Nov 13 5:39 PM PT; lifts last updated Oct 29 10:25 AM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -56,7 +56,7 @@
      false
     ]
    ],
-   "_forecast": "Forecast: Fri rain 49°F/36°F; Sat a chance of rain between 10am and 4pm 43°F/37°F; Sun rain 41°F/31°F; Mon a slight chance of rain before 10am 39°F/30°F; Tue mostly sunny 39°F/30°F; Wed snow likely 36°F/29°F."
+   "_forecast": "Forecast: Fri rain 42°F/37°F; Sat a chance of rain between 10am and 4pm 43°F/37°F; Sun rain 41°F/31°F; Mon a slight chance of rain before 10am 39°F/30°F; Tue mostly sunny 39°F/30°F; Wed snow likely 36°F/29°F."
   },
   {
    "id": "summit",
@@ -87,11 +87,11 @@
     ],
     [
      "Temp (pass)",
-     "46°F"
+     "43°F"
     ]
    ],
-   "note": "Forecast: Fri rain 49°F/36°F; Sat a chance of rain between 10am and 4pm 43°F/37°F; Sun rain 41°F/31°F; Mon a slight chance of rain before 10am 39°F/30°F; Tue mostly sunny 39°F/30°F; Wed snow likely 36°F/29°F. I-90 bare and dry, no restrictions.",
-   "updated": "Resort feed Nov 13 8:37 AM PT; weather Nov 13 12:32 PM PT; lifts last updated Oct 29 10:25 AM PT",
+   "note": "Forecast: Fri rain 42°F/37°F; Sat a chance of rain between 10am and 4pm 43°F/37°F; Sun rain 41°F/31°F; Mon a slight chance of rain before 10am 39°F/30°F; Tue mostly sunny 39°F/30°F; Wed snow likely 36°F/29°F. I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 13 8:37 AM PT; weather Nov 13 5:39 PM PT; lifts last updated Oct 29 10:25 AM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
