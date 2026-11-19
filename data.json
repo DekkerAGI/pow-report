@@ -1,5 +1,5 @@
 {
- "generated": "Wed Nov 18, 2026 · 1:35 PM PT",
+ "generated": "Wed Nov 18, 2026 · 6:45 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -30,11 +30,11 @@
     ],
     [
      "Temp (pass)",
-     "34°F"
+     "32°F"
     ]
    ],
-   "note": "I-90 bare and dry, no restrictions.",
-   "updated": "Resort feed Nov 17 12:24 PM PT; weather Nov 18 1:22 PM PT",
+   "note": "I-90 bare and dry wet in places, no restrictions.",
+   "updated": "Resort feed Nov 17 12:24 PM PT; weather Nov 18 6:30 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -56,7 +56,7 @@
      false
     ]
    ],
-   "_forecast": "Forecast: Wed a 30 percent chance of snow 35°F/29°F; Thu a slight chance of snow between 7am and 10am 38°F/27°F; Fri mostly cloudy 35°F/27°F; Sat partly sunny 36°F/28°F; Sun a 30 percent chance of snow 35°F/27°F; Mon a slight chance of snow 36°F/30°F."
+   "_forecast": "Forecast: Thu a slight chance of snow between 7am and 10am 38°F/27°F; Fri areas of fog before 1pm 35°F/27°F; Sat partly sunny 36°F/28°F; Sun a 30 percent chance of snow 35°F/27°F; Mon a slight chance of snow 36°F/30°F; Tue snow likely 36°F/32°F."
   },
   {
    "id": "summit",
@@ -87,11 +87,11 @@
     ],
     [
      "Temp (pass)",
-     "34°F"
+     "32°F"
     ]
    ],
-   "note": "Forecast: Wed a 30 percent chance of snow 35°F/29°F; Thu a slight chance of snow between 7am and 10am 38°F/27°F; Fri mostly cloudy 35°F/27°F; Sat partly sunny 36°F/28°F; Sun a 30 percent chance of snow 35°F/27°F; Mon a slight chance of snow 36°F/30°F. I-90 bare and dry, no restrictions.",
-   "updated": "Resort feed Nov 17 12:24 PM PT; weather Nov 18 1:22 PM PT",
+   "note": "Forecast: Thu a slight chance of snow between 7am and 10am 38°F/27°F; Fri areas of fog before 1pm 35°F/27°F; Sat partly sunny 36°F/28°F; Sun a 30 percent chance of snow 35°F/27°F; Mon a slight chance of snow 36°F/30°F; Tue snow likely 36°F/32°F. I-90 bare and dry wet in places, no restrictions.",
+   "updated": "Resort feed Nov 17 12:24 PM PT; weather Nov 18 6:30 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
