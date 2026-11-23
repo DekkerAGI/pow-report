@@ -1,5 +1,5 @@
 {
- "generated": "Sun Nov 22, 2026 · 12:27 PM PT",
+ "generated": "Sun Nov 22, 2026 · 5:56 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -30,11 +30,11 @@
     ],
     [
      "Temp (pass)",
-     "33°F"
+     "31°F"
     ]
    ],
-   "note": "I-90 bare and dry, wet in places, no restrictions.",
-   "updated": "Resort feed Nov 22 10:32 AM PT; weather Nov 22 12:17 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "note": "I-90 mostly bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 22 10:32 AM PT; weather Nov 22 5:55 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -56,7 +56,7 @@
      false
     ]
    ],
-   "_forecast": "Forecast: Sun a 50 percent chance of snow before 4pm 33°F/29°F; Mon a 50 percent chance of snow before 1pm 33°F/31°F; Tue rain and snow likely 35°F/33°F; Wed rain likely 39°F/35°F; Thu rain and snow 39°F/36°F; Fri rain 40°F/36°F."
+   "_forecast": "Forecast: Mon a 50 percent chance of snow before 1pm 33°F/31°F; Tue rain and snow likely 35°F/33°F; Wed rain likely 39°F/35°F; Thu rain and snow 39°F/36°F; Fri rain 40°F/36°F; Sat rain likely 40°F/34°F."
   },
   {
    "id": "summit",
@@ -87,11 +87,11 @@
     ],
     [
      "Temp (pass)",
-     "33°F"
+     "31°F"
     ]
    ],
-   "note": "Forecast: Sun a 50 percent chance of snow before 4pm 33°F/29°F; Mon a 50 percent chance of snow before 1pm 33°F/31°F; Tue rain and snow likely 35°F/33°F; Wed rain likely 39°F/35°F; Thu rain and snow 39°F/36°F; Fri rain 40°F/36°F. I-90 bare and dry, wet in places, no restrictions.",
-   "updated": "Resort feed Nov 22 10:32 AM PT; weather Nov 22 12:17 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "note": "Forecast: Mon a 50 percent chance of snow before 1pm 33°F/31°F; Tue rain and snow likely 35°F/33°F; Wed rain likely 39°F/35°F; Thu rain and snow 39°F/36°F; Fri rain 40°F/36°F; Sat rain likely 40°F/34°F. I-90 mostly bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 22 10:32 AM PT; weather Nov 22 5:55 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
