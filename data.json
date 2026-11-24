@@ -1,5 +1,5 @@
 {
- "generated": "Sun Nov 22, 2026 · 5:56 PM PT",
+ "generated": "Mon Nov 23, 2026 · 5:12 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -30,11 +30,11 @@
     ],
     [
      "Temp (pass)",
-     "31°F"
+     "32°F"
     ]
    ],
-   "note": "I-90 mostly bare and wet, no restrictions.",
-   "updated": "Resort feed Nov 22 10:32 AM PT; weather Nov 22 5:55 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "note": "I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 23 3:30 PM PT; weather Nov 23 4:51 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -56,7 +56,7 @@
      false
     ]
    ],
-   "_forecast": "Forecast: Mon a 50 percent chance of snow before 1pm 33°F/31°F; Tue rain and snow likely 35°F/33°F; Wed rain likely 39°F/35°F; Thu rain and snow 39°F/36°F; Fri rain 40°F/36°F; Sat rain likely 40°F/34°F."
+   "_forecast": "Forecast: Mon a 20 percent chance of snow 34°F/32°F; Tue snow likely 36°F/34°F; Wed rain 40°F/36°F; Thu rain before 10am 40°F/36°F; Fri rain before 4pm 39°F/34°F; Sat a chance of rain 39°F/33°F."
   },
   {
    "id": "summit",
@@ -87,11 +87,11 @@
     ],
     [
      "Temp (pass)",
-     "31°F"
+     "32°F"
     ]
    ],
-   "note": "Forecast: Mon a 50 percent chance of snow before 1pm 33°F/31°F; Tue rain and snow likely 35°F/33°F; Wed rain likely 39°F/35°F; Thu rain and snow 39°F/36°F; Fri rain 40°F/36°F; Sat rain likely 40°F/34°F. I-90 mostly bare and wet, no restrictions.",
-   "updated": "Resort feed Nov 22 10:32 AM PT; weather Nov 22 5:55 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "note": "Forecast: Mon a 20 percent chance of snow 34°F/32°F; Tue snow likely 36°F/34°F; Wed rain 40°F/36°F; Thu rain before 10am 40°F/36°F; Fri rain before 4pm 39°F/34°F; Sat a chance of rain 39°F/33°F. I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 23 3:30 PM PT; weather Nov 23 4:51 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -152,13 +152,13 @@
     ]
    ],
    "note": "Baker's own report is stale, so these numbers are from its last update. Baker needs roughly 20 to 40 in of base plus a good forecast before opening. Check the official link for today.",
-   "updated": "Mt. Baker page, November 21, 2026 5:22 PM",
+   "updated": "Mt. Baker page, November 23, 2026 10:12 AM",
    "link": [
     "Official snow report",
     "https://www.mtbaker.us/snow-report/"
    ],
    "cams": [],
-   "warn": "Heads up: Baker's own report is 1 days old. These numbers may be out of date; check the official link."
+   "warn": ""
   },
   {
    "id": "stevens",
