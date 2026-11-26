@@ -1,5 +1,5 @@
 {
- "generated": "Wed Nov 25, 2026 · 2:44 PM PT",
+ "generated": "Wed Nov 25, 2026 · 7:44 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -34,7 +34,7 @@
     ]
    ],
    "note": "I-90 bare and wet, no restrictions.",
-   "updated": "Resort feed Nov 25 2:14 PM PT; weather Nov 25 2:38 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "updated": "Resort feed Nov 25 2:14 PM PT; weather Nov 25 7:22 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -56,7 +56,7 @@
      false
     ]
    ],
-   "_forecast": "Forecast: Wed a 30 percent chance of rain 41°F/36°F; Thu rain 41°F/36°F; Fri rain and snow 38°F/33°F; Sat partly sunny 38°F/32°F; Sun a slight chance of rain before 10am 37°F/32°F; Mon rain and snow 36°F/33°F."
+   "_forecast": "Forecast: Thu rain 41°F/39°F; Fri rain and snow 38°F/33°F; Sat partly sunny 38°F/32°F; Sun a slight chance of rain before 10am 37°F/32°F; Mon rain and snow 36°F/33°F; Tue a chance of rain and snow 38°F/32°F."
   },
   {
    "id": "summit",
@@ -90,8 +90,8 @@
      "36°F"
     ]
    ],
-   "note": "Forecast: Wed a 30 percent chance of rain 41°F/36°F; Thu rain 41°F/36°F; Fri rain and snow 38°F/33°F; Sat partly sunny 38°F/32°F; Sun a slight chance of rain before 10am 37°F/32°F; Mon rain and snow 36°F/33°F. I-90 bare and wet, no restrictions.",
-   "updated": "Resort feed Nov 25 2:14 PM PT; weather Nov 25 2:38 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "note": "Forecast: Thu rain 41°F/39°F; Fri rain and snow 38°F/33°F; Sat partly sunny 38°F/32°F; Sun a slight chance of rain before 10am 37°F/32°F; Mon rain and snow 36°F/33°F; Tue a chance of rain and snow 38°F/32°F. I-90 bare and wet, no restrictions.",
+   "updated": "Resort feed Nov 25 2:14 PM PT; weather Nov 25 7:22 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
