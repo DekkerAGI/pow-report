@@ -1,5 +1,5 @@
 {
- "generated": "Wed Nov 25, 2026 · 7:44 PM PT",
+ "generated": "Thu Nov 26, 2026 · 2:34 PM PT",
  "resorts": [
   {
    "id": "alpental",
@@ -18,7 +18,7 @@
     ],
     [
      "Base depth",
-     "2 in"
+     "0 in"
     ],
     [
      "Season total",
@@ -30,11 +30,11 @@
     ],
     [
      "Temp (pass)",
-     "36°F"
+     "44°F"
     ]
    ],
-   "note": "I-90 bare and wet, no restrictions.",
-   "updated": "Resort feed Nov 25 2:14 PM PT; weather Nov 25 7:22 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "note": "I-90 bare and wet, areas of standing water, no restrictions.",
+   "updated": "Resort feed Nov 26 12:51 PM PT; weather Nov 26 2:33 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -56,7 +56,7 @@
      false
     ]
    ],
-   "_forecast": "Forecast: Thu rain 41°F/39°F; Fri rain and snow 38°F/33°F; Sat partly sunny 38°F/32°F; Sun a slight chance of rain before 10am 37°F/32°F; Mon rain and snow 36°F/33°F; Tue a chance of rain and snow 38°F/32°F."
+   "_forecast": "Forecast: Thu rain 40°F/38°F; Fri rain and snow 37°F/30°F; Sat patchy fog before 10am 39°F/31°F; Sun a slight chance of rain and snow before 1pm 36°F/33°F; Mon rain and snow 36°F/32°F; Tue a chance of rain and snow 37°F/30°F."
   },
   {
    "id": "summit",
@@ -75,7 +75,7 @@
     ],
     [
      "Base depth",
-     "2 in"
+     "0 in"
     ],
     [
      "Season total",
@@ -87,11 +87,11 @@
     ],
     [
      "Temp (pass)",
-     "36°F"
+     "44°F"
     ]
    ],
-   "note": "Forecast: Thu rain 41°F/39°F; Fri rain and snow 38°F/33°F; Sat partly sunny 38°F/32°F; Sun a slight chance of rain before 10am 37°F/32°F; Mon rain and snow 36°F/33°F; Tue a chance of rain and snow 38°F/32°F. I-90 bare and wet, no restrictions.",
-   "updated": "Resort feed Nov 25 2:14 PM PT; weather Nov 25 7:22 PM PT; lifts last updated Nov 17 12:24 PM PT",
+   "note": "Forecast: Thu rain 40°F/38°F; Fri rain and snow 37°F/30°F; Sat patchy fog before 10am 39°F/31°F; Sun a slight chance of rain and snow before 1pm 36°F/33°F; Mon rain and snow 36°F/32°F; Tue a chance of rain and snow 37°F/30°F. I-90 bare and wet, areas of standing water, no restrictions.",
+   "updated": "Resort feed Nov 26 12:51 PM PT; weather Nov 26 2:33 PM PT; lifts last updated Nov 17 12:24 PM PT",
    "link": [
     "Official mountain report",
     "https://www.summitatsnoqualmie.com/mountain-report"
@@ -158,7 +158,7 @@
     "https://www.mtbaker.us/snow-report/"
    ],
    "cams": [],
-   "warn": ""
+   "warn": "Heads up: Baker's own report is 1 days old. These numbers may be out of date; check the official link."
   },
   {
    "id": "stevens",
